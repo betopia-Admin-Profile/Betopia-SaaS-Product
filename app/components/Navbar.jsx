@@ -4,45 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-const DSLLogo = () => (
-    <div className="flex flex-col items-center">
-        <div className="relative h-10 w-24">
-            {/* DSL Letters */}
-            <svg viewBox="0 0 100 40" className="h-full w-full">
-                <defs>
-                    <linearGradient id="greenSwoosh" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#10b981" />
-                        <stop offset="100%" stopColor="#d1fae5" stopOpacity="0.5" />
-                    </linearGradient>
-                </defs>
-                {/* Letters D S L */}
-                <text x="5" y="32" fontSize="32" fontWeight="900" fill="#ee2c24" fontFamily="Inter, sans-serif">D</text>
-                <text x="32" y="32" fontSize="32" fontWeight="900" fill="#003e8a" fontFamily="Inter, sans-serif">S</text>
-                <text x="65" y="32" fontSize="32" fontWeight="900" fill="#ee2c24" fontFamily="Inter, sans-serif">L</text>
-
-                {/* The green swoosh orbit */}
-                <path
-                    d="M5,22 Q50,0 95,22"
-                    stroke="url(#greenSwoosh)"
-                    strokeWidth="4"
-                    fill="none"
-                    strokeLinecap="round"
-                    className="opacity-90"
-                />
-                <path
-                    d="M5,22 Q50,44 95,22"
-                    stroke="#10b981"
-                    strokeWidth="4"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray="0, 55, 100"
-                    className="opacity-90"
-                />
-            </svg>
-        </div>
-        <span className="text-[9px] font-bold text-slate-800 tracking-tighter -mt-1 uppercase">Daffodil Software Ltd.</span>
-    </div>
-);
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +45,7 @@ const Navbar = () => {
                         href="/"
                         className="flex items-center cursor-pointer group select-none hover:opacity-80 transition-opacity"
                     >
-                        <DSLLogo />
+                        <div className='text-2xl font-bold text-emerald-500'>Betopia<span className="text-red-500">.</span></div>
                     </Link>
 
                     {/* Desktop Navigation */}
