@@ -6,7 +6,7 @@ import { Plus } from 'lucide-react';
 
 const FAQS = [
     {
-        question: "How does Betopia determine engagement models?",
+        question: "How does Boomering determine engagement models?",
         answer: "We offer flexible engagement models tailored to enterprise needs: Dedicated Teams for long-term scalability, Fixed Price for defined project scopes, and Time & Materials for evolving requirements. We start with a discovery phase to recommend the optimal structure."
     },
     {
@@ -39,7 +39,7 @@ const FAQItem = ({ question, answer }) => {
                 <span className={`text-xl md:text-2xl font-bold transition-colors ${isOpen ? 'text-blue-600' : 'text-slate-900 group-hover:text-slate-700'}`}>
                     {question}
                 </span>
-                <span className={`ml-6 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-blue-600 text-white rotate-45' : 'bg-white border border-slate-200 text-slate-400 group-hover:border-blue-200 group-hover:text-blue-600'}`}>
+                <span className={`ml-6 shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-blue-600 text-white rotate-45' : 'bg-white border border-slate-200 text-slate-400 group-hover:border-blue-200 group-hover:text-blue-600'}`}>
                     <Plus className="w-5 h-5" />
                 </span>
             </button>

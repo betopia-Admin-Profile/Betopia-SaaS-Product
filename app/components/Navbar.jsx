@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
     }, [isOpen]);
 
     const navLinks = [
-        { name: 'About', path: '/' },
+        { name: 'About', path: '/about' },
         { name: 'Solutions', path: '/solutions' },
         { name: 'Industries', path: '/industries' },
         { name: 'Insights', path: '/insights' },
@@ -53,7 +54,7 @@ const Navbar = () => {
                             href="/"
                             className="flex items-center cursor-pointer group select-none hover:opacity-80 transition-opacity"
                         >
-                            <div className='text-2xl font-bold text-emerald-500'>Betopia<span className="text-red-500">.</span></div>
+                            <img src="/boomeringLogo.png" alt="" className='w-full h-[60px] object-contain' />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -62,7 +63,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     href={link.path}
-                                    className="px-5 py-2 text-slate-600 hover:text-blue-600 font-semibold transition-all duration-200 text-sm tracking-tight rounded-xl hover:bg-slate-50/50"
+                                    className="px-5 py-2 text-slate-600 hover:text-brandPurple font-semibold transition-all duration-200 text-sm tracking-wide rounded-xl hover:bg-slate-50/50"
                                 >
                                     {link.name}
                                 </Link>
@@ -72,10 +73,10 @@ const Navbar = () => {
 
                             <Link
                                 href="/contact"
-                                className="btn-neon-emerald flex items-center group px-6 py-2.5 rounded-full font-bold text-xs tracking-tight text-slate-900"
+                                className="btn-neon-emerald flex items-center group px-6 py-2.5 rounded-full font-semibold text-xs tracking-wider text-slate-50"
                             >
                                 Schedule a Meeting
-                                <div className="ml-3 w-6 h-6 bg-black rounded-full flex items-center justify-center text-white">
+                                <div className="ml-3 w-6 h-6 bg-white rounded-full flex items-center justify-center text-black">
                                     <ArrowRight className="w-3 h-3" />
                                 </div>
                             </Link>

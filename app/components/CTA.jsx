@@ -18,11 +18,11 @@ const CTA = () => {
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wide mb-8 leading-[1.1]">
                             Ready to Engineer Your <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Digital Future?</span>
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">Digital Future?</span>
                         </h2>
 
                         <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Join the ranks of forward-thinking enterprises that trust Betopia to build, scale, and secure their mission-critical software.
+                            Join the ranks of forward-thinking enterprises that trust Boomering to build, scale, and secure their mission-critical software.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -46,7 +46,7 @@ const CTA = () => {
                     </div>
 
                     {/* Decorative Grid Lines */}
-                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)] pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[100px_100px] mask-[radial-gradient(ellipse_at_center,black_30%,transparent_70%)] pointer-events-none"></div>
                 </div>
             </div>
         </section>

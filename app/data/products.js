@@ -1,10 +1,11 @@
 export const PRODUCTS = [
     {
         id: 'agentic-ai',
-        name: 'Betopia Agentic AI',
+        name: 'Boomering Agentic AI',
         tagline: 'The Future of Autonomous Business',
         overview:
             'Next-generation digital tools that don’t just respond — they act. We deploy intelligent agents that autonomously execute complex workflows, reducing operational overhead by 70%.',
+        image: '/agentic AI.png',
 
         features: [
             'Autonomous Sales & Negotiation',
@@ -61,6 +62,7 @@ export const PRODUCTS = [
         tagline: 'AI-Powered Incoming Call Handling',
         overview:
             'AI-powered call management system for 300+ enterprises with virtual numbers, smart routing, AI receptionist, and call summaries.',
+        image: '/mailer.png',
 
         features: [
             'Virtual Numbers',
@@ -111,6 +113,7 @@ export const PRODUCTS = [
         name: 'Smart IVR',
         tagline: 'Automated Operations Center',
         overview: 'IVR-based communication system that handles inbound calls, qualifies leads, and schedules meetings automatically — available 24/7 with a centralized dashboard for complete administrative control.',
+        image: '/ivr.png',
         features: [
             'Automated Operations',
             'Centralized Live Dashboard',
@@ -149,9 +152,10 @@ export const PRODUCTS = [
 
     {
         id: 'business-24x7',
-        name: 'Betopia Business 24x7',
+        name: 'Boomering Business 24x7',
         tagline: 'Automation Sales ERP',
         overview: 'A fully modular enterprise management suite that simplifies and automates key business processes. From supplier management to HR and financial modules, it serves as the backbone for modern business operations.',
+        image: '/business 247 erp.png',
         features: [
             'Supplier Management',
             'Manufacturing Modules',
@@ -191,10 +195,11 @@ export const PRODUCTS = [
 
     {
         id: 'edu-os',
-        name: 'Betopia EduOS',
+        name: 'Boomering EduOS',
         tagline: 'Digital Operating System for Universities',
         overview:
             'Unified ERP platform for modern universities covering admissions, academics, finance, HR, certification, and alumni management.',
+        image: '/mailer.png',
 
         features: [
             'Admissions & Curriculum Planning',
@@ -241,10 +246,11 @@ export const PRODUCTS = [
 
     {
         id: 'care-os',
-        name: 'Betopia CareOS',
+        name: 'Boomering CareOS',
         tagline: 'Future of Integrated Hospital Management',
         overview:
             'End-to-end hospital management system unifying OPD/IPD, EMR, billing, insurance, diagnostics, and telemedicine.',
+        image: '/ivr.png',
 
         features: [
             'OPD/IPD Management',
@@ -288,10 +294,11 @@ export const PRODUCTS = [
     },
 
     {
-        id: 'betopia-lms',
-        name: 'Betopia LMS',
+        id: 'boomering-lms',
+        name: 'Boomering LMS',
         tagline: 'Bridging Education and Industry',
         overview: 'A future-ready LMS designed for enterprise and educational workforce development. Features AI-powered control & analytics, multi-device learning access, and a comprehensive course builder.',
+        image: '/eduerp.png',
         features: [
             'AI-Powered Control & Analytics',
             'Multi-Device Learning Access',
@@ -333,6 +340,7 @@ export const PRODUCTS = [
         name: 'Virtual Gate',
         tagline: 'Avatar and Interaction Features',
         overview: 'Immersive platform capabilities with 3D Interactive Avatars, customizable venues, and real-time networking lounges. Supports multi-language interaction and cross-platform compatibility for global events.',
+        image: '/vritual gate.png',
         features: [
             'Avatar Creation and Customization',
             'Interactive Networking',
@@ -371,9 +379,10 @@ export const PRODUCTS = [
 
     {
         id: 'smart-class',
-        name: 'Betopia SmartClass',
+        name: 'Boomering SmartClass',
         tagline: 'All-in-one Interactive Flat Panel',
         overview: 'Transforms traditional classrooms and meeting rooms into fully digital interactive environments. Includes built-in Android OS, multi-touch capabilities, and seamless cloud compatibility.',
+        image: '/smart class_1.png',
         features: [
             'Multi-Touch Capabilities',
             'Built-in Android System',
@@ -409,10 +418,11 @@ export const PRODUCTS = [
     },
 
     {
-        id: 'betopia-stitch',
-        name: 'Betopia Stitch',
+        id: 'boomering-stitch',
+        name: 'Boomering Stitch',
         tagline: 'Precision Operational Workflow',
         overview: 'Streamline your operational workflow with an integrated ecosystem designed for precision. Features advanced machine tracking, movement signals, and a comprehensive operational reporting suite.',
+        image: '/rmg.png',
         features: [
             'Machine Tracking System',
             'Signal & Alarm for Movement',
@@ -451,9 +461,10 @@ export const PRODUCTS = [
 
     {
         id: 'mail-campaign',
-        name: 'Betopia Mail Campaign',
+        name: 'Boomering Mail Campaign',
         tagline: 'Enterprise-grade Email Marketing',
         overview: 'Platform for scalable, data-driven outreach offering an intelligence dashboard, audience management, and deep email analytics to optimize your communication strategy.',
+        image: '/mailer.png',
         features: [
             'Intelligence Dashboard',
             'Audience Management',
@@ -491,9 +502,10 @@ export const PRODUCTS = [
 
     {
         id: 'count-trust',
-        name: 'Betopia Count Trust',
+        name: 'Boomering Count Trust',
         tagline: 'Integrated Digital Governance Platform',
         overview: 'The BAG Member System is a secure digital platform for member management, financial tracking, and transparent online voting. Ensures absolute integrity with administrative control.',
+        image: '/vote.png',
         features: [
             'Secure Voting',
             'Administrative Control',
@@ -534,6 +546,7 @@ export const PRODUCTS = [
         name: 'Cloud Managed Services',
         tagline: 'Empower Your Business',
         overview: 'We manage your infrastructure so you can focus on innovation and growth. Offering cloud hosting, migration strategies, and continuous monitoring for disaster recovery.',
+        image: '/mailer.png',
         features: [
             'Cloud Hosting',
             'Cloud Migration',

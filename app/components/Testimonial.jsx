@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const TESTIMONIALS = [
     {
-        quote: "Betopia Group transformed our operational efficiency. Their Agentic AI solution didn't just automate tasks; it completely reimagined our workflow, saving us countless hours per week.",
+        quote: "Boomering Group transformed our operational efficiency. Their Agentic AI solution didn't just automate tasks; it completely reimagined our workflow, saving us countless hours per week.",
         author: "Sarah Jenkins",
         role: "CTO, TechFlow Dynamics",
         avatar: "https://randomuser.me/api/portraits/women/44.jpg"
@@ -23,13 +23,13 @@ const TESTIMONIALS = [
         avatar: "https://randomuser.me/api/portraits/women/68.jpg"
     },
     {
-        quote: "Security was our top concern. Betopia's zero-trust architecture gave us the confidence to migrate our most sensitive patient data to the cloud.",
+        quote: "Security was our top concern. Boomering's zero-trust architecture gave us the confidence to migrate our most sensitive patient data to the cloud.",
         author: "Dr. Marcus Thorne",
         role: "Director of IT, MedSecure Systems",
         avatar: "https://randomuser.me/api/portraits/men/85.jpg"
     },
     {
-        quote: "Developing with custom software usually takes months. Betopia delivered a working modular MVP in weeks, allowing us to capture the market ahead of schedule.",
+        quote: "Developing with custom software usually takes months. Boomering delivered a working modular MVP in weeks, allowing us to capture the market ahead of schedule.",
         author: "Priya Patel",
         role: "Founder, RapidScale Startups",
         avatar: "https://randomuser.me/api/portraits/women/12.jpg"
@@ -113,13 +113,13 @@ const Testimonial = () => {
                         {TESTIMONIALS.map((t, i) => (
                             <div
                                 key={i}
-                                className={`${isMobile ? 'w-full px-0' : 'w-1/3 px-3'} flex-shrink-0`}
+                                className={`${isMobile ? 'w-full px-0' : 'w-1/3 px-3'} shrink-0`}
                             >
                                 <div className="bg-slate-50 p-10 rounded-xl flex flex-col h-full border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-300">
                                     <div className="mb-8">
                                         <Quote className="w-12 h-12 text-slate-200 fill-slate-200" />
                                     </div>
-                                    <p className="text-slate-600 text-[15px] leading-[1.6] font-medium mb-12 flex-grow">
+                                    <p className="text-slate-600 text-[15px] leading-[1.6] font-medium mb-12 grow">
                                         "{t.quote}"
                                     </p>
                                     <div className="flex items-center pt-6 border-t border-slate-200/50">

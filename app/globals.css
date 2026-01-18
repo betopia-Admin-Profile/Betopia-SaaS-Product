@@ -6,7 +6,10 @@
   --foreground: #171717;
 }
 
-@theme inline {}
+@theme inline {
+  --color-brandPurple: #4d2a83;
+  --color-brandCuriousBlue: #309EC4;
+}
 
 
 body {
@@ -44,12 +47,12 @@ body {
 }
 
 .btn-neon-emerald {
-  background-color: #00ff88;
+  background-color: var(--color-brandPurple);
   transition: all 0.3s ease;
 }
 
 .btn-neon-emerald:hover {
-  background-color: #00e67a;
+  background-color: var(--color-brandCuriousBlue);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px -10px rgba(0, 255, 136, 0.5);
 }

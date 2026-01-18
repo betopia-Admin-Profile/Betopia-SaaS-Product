@@ -69,21 +69,21 @@ const MetricCounter = () => {
     ];
 
     return (
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <section className="py-20 bg-brandPurple text-white relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-                <div className="absolute -top-20 -left-20 w-96 h-96 bg-emerald-500 rounded-full blur-[100px]"></div>
-                <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-blue-500 rounded-full blur-[100px]"></div>
+                <div className="absolute -top-20 -left-20 w-96 h-96 bg-brandCuriousBlue rounded-full blur-[100px]"></div>
+                <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-brandCuriousBlue rounded-full blur-[100px]"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800/50">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-x divide-slate-400/50">
                     {metrics.map((metric, index) => (
                         <div key={index} className="flex flex-col items-center justify-center p-4">
-                            <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400 mb-2 font-sans tracking-tight">
+                            <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-100 mb-2 font-sans tracking-tight">
                                 <AnimatedCounter end={metric.value} suffix={metric.suffix} />
                             </div>
-                            <p className="text-sm md:text-base font-medium text-emerald-400 uppercase tracking-widest">
+                            <p className="text-sm md:text-base font-md text-white tracking-widest">
                                 {metric.label}
                             </p>
                         </div>

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
         };
     }
     return {
-        title: `${product.name} - Betopia Limited`,
+        title: `${product.name} - Boomering Limited`,
         description: product.overview,
     };
 }

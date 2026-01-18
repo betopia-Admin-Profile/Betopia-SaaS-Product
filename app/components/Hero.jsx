@@ -12,7 +12,7 @@ const Hero = () => {
 
                 {/* New Pill Badge */}
                 <div className="inline-flex items-center bg-white p-1.5 pr-6 rounded-full border border-slate-200 shadow-sm mb-8 hover:shadow-md transition-shadow cursor-default">
-                    <span className="bg-[#ccf381] text-slate-900 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mr-3">
+                    <span className="bg-brandCuriousBlue text-slate-100 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mr-3">
                         {heroData.badge.label}
                     </span>
                     <span className="text-sm font-bold text-slate-600 tracking-tight">
@@ -23,7 +23,7 @@ const Hero = () => {
                 {/* Headline */}
                 <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-wide leading-[1.05] mb-4 max-w-5xl mx-auto">
                     {heroData.headline}
-                    <span className="text-5xl md:text-7xl font-bold text-blue-600 tracking-wide leading-[1.05] mb-4 max-w-5xl mx-auto ml-2">
+                    <span className="text-5xl md:text-7xl font-bold text-brandPurple tracking-wide leading-[1.05] mb-4 max-w-5xl mx-auto ml-2">
                         {heroData.headline2}
                     </span>
                 </h1>
@@ -40,10 +40,10 @@ const Hero = () => {
                             <Link
                                 key={index}
                                 href={btn.link}
-                                className="btn-neon-emerald flex items-center group px-8 py-4 rounded-full font-bold text-sm tracking-tight text-slate-900 shadow-xl shadow-emerald-500/10 min-w-[200px] justify-center"
+                                className="btn-neon-emerald flex items-center group px-8 py-4 rounded-full font-semibold text-sm tracking-wider text-slate-100 shadow-xl shadow-emerald-500/10 min-w-[200px] justify-center"
                             >
                                 {btn.text}
-                                <div className="ml-4 w-7 h-7 bg-black rounded-full flex items-center justify-center text-white group-hover:translate-x-1 transition-transform">
+                                <div className="ml-4 w-7 h-7 bg-white rounded-full flex items-center justify-center text-black group-hover:translate-x-1 transition-transform">
                                     <ArrowRight className="w-4 h-4" />
                                 </div>
                             </Link>
@@ -51,7 +51,7 @@ const Hero = () => {
                             <Link
                                 key={index}
                                 href={btn.link}
-                                className="group flex items-center justify-center text-slate-900 font-bold text-sm tracking-tight hover:text-blue-600 transition-colors min-w-[200px]"
+                                className="group flex items-center justify-center text-slate-900 font-semibold text-sm tracking-wider hover:text-blue-600 transition-colors min-w-[200px]"
                             >
                                 {btn.text} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
