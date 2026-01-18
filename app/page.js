@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import MetricCounter from "./components/MetricCounter";
 import Products from "./components/Products";
+import AppsBuilt from "./components/AppsBuilt";
 import CostEstimator from "./components/CostEstimator";
 import ComparePlans from "./components/ComparePlans";
 import Testimonial from "./components/Testimonial";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <MetricCounter />
       <Products />
+      <AppsBuilt />
       <CostEstimator />
       <ComparePlans />
       <Testimonial />
