@@ -194,7 +194,7 @@ const ProductDetailsPage = async ({ params }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Security */}
                         {product.security && (
-                            <div className="bg-white p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                            <div className="bg-white p-10 rounded-4xl shadow-sm border border-slate-100">
                                 <div className="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
                                     <Lock className="w-7 h-7 text-indigo-600" />
                                 </div>
@@ -212,7 +212,7 @@ const ProductDetailsPage = async ({ params }) => {
 
                         {/* White Label */}
                         {product.whiteLabel && (
-                            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-10 rounded-[2rem] shadow-xl text-white">
+                            <div className="bg-linear-to-br from-blue-600 to-indigo-700 p-10 rounded-4xl shadow-xl text-white">
                                 <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
                                     <Layers className="w-7 h-7 text-white" />
                                 </div>
