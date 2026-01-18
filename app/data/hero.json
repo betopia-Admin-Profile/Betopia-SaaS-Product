@@ -1,0 +1,21 @@
+{
+    "badge": {
+        "label": "New",
+        "text": "Latest Enterprise Updates"
+    },
+    "headline": "Transform Your Enterprise With",
+    "headline2": "Betopia",
+    "subheadline": "Streamline operations and enhance productivity with our cutting-edge custom software and autonomous agents.",
+    "buttons": [
+        {
+            "text": "Schedule a Meeting",
+            "link": "/contact",
+            "primary": true
+        },
+        {
+            "text": "View Case Studies",
+            "link": "/solutions",
+            "primary": false
+        }
+    ]
+}
