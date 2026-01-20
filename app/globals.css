@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -6,11 +6,14 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-brandPurple: #4d2a83;
-  --color-brandCuriousBlue: #309EC4;
+html {
+  scroll-behavior: smooth;
 }
 
+@theme inline {
+  --color-brandPurple: #4d2a83;
+  --color-brandCuriousBlue: #309ec4;
+}
 
 body {
   background: var(--background);
@@ -33,17 +36,29 @@ body {
 }
 
 .hero-panel-bg {
-  background: linear-gradient(to right,
-      #daede6 0%, #daede6 10%,
-      #e3f1ed 10%, #e3f1ed 20%,
-      #ebf5f3 20%, #ebf5f3 30%,
-      #f3f9f8 30%, #f3f9f8 40%,
-      #fafcfc 40%, #fafcfc 50%,
-      #ffffff 50%, #ffffff 60%,
-      #fafcfc 60%, #fafcfc 70%,
-      #f3f9f8 70%, #f3f9f8 80%,
-      #ebf5f3 80%, #ebf5f3 90%,
-      #e3f1ed 90%, #e3f1ed 100%);
+  background: linear-gradient(
+    to right,
+    #daede6 0%,
+    #daede6 10%,
+    #e3f1ed 10%,
+    #e3f1ed 20%,
+    #ebf5f3 20%,
+    #ebf5f3 30%,
+    #f3f9f8 30%,
+    #f3f9f8 40%,
+    #fafcfc 40%,
+    #fafcfc 50%,
+    #ffffff 50%,
+    #ffffff 60%,
+    #fafcfc 60%,
+    #fafcfc 70%,
+    #f3f9f8 70%,
+    #f3f9f8 80%,
+    #ebf5f3 80%,
+    #ebf5f3 90%,
+    #e3f1ed 90%,
+    #e3f1ed 100%
+  );
 }
 
 .btn-neon-emerald {

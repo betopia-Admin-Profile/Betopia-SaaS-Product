@@ -1,23 +1,20 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Search } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
-
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [mounted, setMounted] = useState(false);
 
-    // Ensure component is mounted before rendering dynamic content
     useEffect(() => {
         setMounted(true);
     }, []);
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 20);
+        const handleScroll = () => setScrolled(window.scrollY > 100);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -43,50 +40,60 @@ const Navbar = () => {
     return (
         <>
             {/* Main Navbar */}
-            <nav className={`fixed w-full z-[9999] transition-all duration-500 ease-in-out ${mounted && scrolled
-                ? 'py-4 bg-white/90 backdrop-blur shadow-sm'
-                : 'py-6 bg-transparent'
+            <nav className={`fixed z-[9999] transition-all duration-700 ease-out ${mounted && scrolled
+                ? 'top-4 left-1/2 -translate-x-1/2 w-[95%] container mx-auto '
+                : 'top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl'
                 }`}>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+                <div className={`w-full transition-all duration-700 ease-out rounded-full ${mounted && scrolled
+                    ? 'bg-white shadow-lg shadow-black/5 py-3 px-6'
+                    : 'bg-white backdrop-blur-md border border-white/10 py-3 px-6'
+                    }`}>
                     <div className="flex justify-between items-center">
                         {/* Logo */}
                         <Link
                             href="/"
-                            className="flex items-center cursor-pointer group select-none hover:opacity-80 transition-opacity"
+                            className="flex items-center cursor-pointer group select-none"
                         >
-                            <img src="/boomeringLogo.png" alt="" className='w-full h-[60px] object-contain' />
+                            <img
+                                src="/boomeringLogo.png"
+                                alt="Boomering"
+                                className={`transition-all duration-300 ${scrolled ? 'h-12' : 'h-12'
+                                    } object-contain`}
+                            />
                         </Link>
 
-                        {/* Desktop Navigation */}
-                        <div className="hidden lg:flex items-center space-x-2">
+                        {/* Desktop Navigation + CTA (Right Aligned) */}
+                        <div className="hidden lg:flex items-center space-x-2 ml-auto">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.path}
-                                    className="px-5 py-2 text-slate-600 hover:text-brandPurple font-semibold transition-all duration-200 text-sm tracking-wide rounded-xl hover:bg-slate-50/50"
+                                    className={`px-4 py-4 font-medium transition-all duration-200 text-sm tracking-wide rounded-full ${scrolled
+                                        ? 'text-slate-700 hover:text-brandPurple hover:bg-slate-100'
+                                        : 'text-slate-700 hover:text-brandPurple hover:bg-white/10'
+                                        }`}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
 
-                            <div className="w-px h-6 bg-slate-200 mx-4"></div>
-
+                            {/* CTA Button */}
                             <Link
                                 href="/contact"
-                                className="btn-neon-emerald flex items-center group px-6 py-2.5 rounded-full font-semibold text-xs tracking-wider text-slate-50"
+                                className="flex items-center px-6 py-2.5 rounded-full font-semibold text-sm tracking-wide text-white bg-linear-to-r from-brandPurple to-purple-600 hover:from-purple-600 hover:to-brandPurple transition-all duration-300 shadow-lg shadow-purple-500/20 ml-4"
                             >
                                 Schedule a Meeting
-                                <div className="ml-3 w-6 h-6 bg-white rounded-full flex items-center justify-center text-black">
-                                    <ArrowRight className="w-3 h-3" />
-                                </div>
                             </Link>
                         </div>
 
                         {/* Mobile Menu Toggle */}
-                        <div className="lg:hidden flex items-center space-x-4">
+                        <div className="lg:hidden flex items-center">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
-                                className="p-2.5 rounded-xl transition-all duration-300 text-slate-900 hover:bg-slate-100"
+                                className={`p-2.5 rounded-full transition-all duration-300 ${scrolled
+                                    ? 'text-slate-900 hover:bg-slate-100'
+                                    : 'text-white hover:bg-white/10'
+                                    }`}
                                 aria-label="Toggle menu"
                             >
                                 <Menu size={24} />
@@ -96,20 +103,20 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Mobile Menu with smooth slide animation */}
+            {/* Mobile Menu */}
             {mounted && (
                 <div
                     className={`lg:hidden fixed inset-0 z-[99999] transition-all duration-500 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                         }`}
                 >
-                    {/* Backdrop with fade */}
+                    {/* Backdrop */}
                     <div
                         className={`absolute inset-0 bg-slate-950/95 backdrop-blur-xl transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'
                             }`}
                         onClick={() => setIsOpen(false)}
                     ></div>
 
-                    {/* Close button with fade */}
+                    {/* Close button */}
                     <button
                         onClick={() => setIsOpen(false)}
                         className={`fixed top-6 right-4 sm:right-6 p-2.5 rounded-xl bg-white text-slate-900 shadow-lg z-[100000] transition-all duration-300 delay-200 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
@@ -119,7 +126,7 @@ const Navbar = () => {
                         <X size={24} />
                     </button>
 
-                    {/* Menu Panel - slides from right */}
+                    {/* Menu Panel */}
                     <div
                         className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-slate-950 p-10 flex flex-col shadow-2xl transition-transform duration-500 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
                             }`}
@@ -130,7 +137,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.path}
                                     onClick={() => setIsOpen(false)}
-                                    className={`block text-4xl font-bold text-white hover:text-emerald-400 transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                                    className={`block text-3xl font-bold text-white hover:text-brandCuriousBlue transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                                         }`}
                                     style={{ transitionDelay: isOpen ? `${150 + index * 75}ms` : '0ms' }}
                                 >
@@ -146,9 +153,9 @@ const Navbar = () => {
                             <Link
                                 href="/contact"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full btn-neon-emerald flex justify-center py-5 rounded-2xl font-black text-sm uppercase tracking-widest text-slate-900"
+                                className="w-full flex justify-center py-4 rounded-full font-bold text-sm uppercase tracking-widest text-white bg-linear-to-r from-brandPurple to-brandCuriousBlue"
                             >
-                                Schedule a Meeting
+                                Contact Us
                             </Link>
                         </div>
                     </div>
